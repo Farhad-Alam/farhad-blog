@@ -11,7 +11,7 @@ type Props = {
 
 const Post = ({ postData }: Props) => {
   return (
-    <div className=" p-4 relative  overflow-hidden group">
+    <div className="p-2 md:p-4 relative overflow-hidden group">
       <Link href={`/post/${postData.slug.current}`}>
         {/* Top */}
         <div className="relative w-full h-80 drop-shadow-lg">
@@ -26,7 +26,7 @@ const Post = ({ postData }: Props) => {
           <div className="flex justify-between items-center group-hover:scale-105 duration-200 ease-linear absolute bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.5)] text-white p-2 rounded-t-lg">
             <div className="">
               <h1 className="mb-2 font-bold">{postData.title}</h1>
-              <span className="text-sm font-semibold text-gray-300">
+              <span className="text-xs sm:text-sm font-semibold text-gray-300">
                 {new Date(postData._createdAt).toLocaleDateString("en-US", {
                   day: "numeric",
                   month: "long",
